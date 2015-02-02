@@ -56,9 +56,10 @@ def enigu_ludantojn():
     ludantoj = []
     while True:
         nomo = input("Nomo de la {0}a ludanto: ".format(len(ludantoj) + 1))
-        if not nomo:
+        if nomo:
+            ludantoj.append(nomo)
+        elif ludantoj:
             return ludantoj
-        ludantoj.append(nomo)
 
 
 def movigu(muso, min, max, pasho):
