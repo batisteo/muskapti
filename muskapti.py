@@ -28,8 +28,8 @@ def get_arg(index, default):
 
 
 def opcioj(min, max, rapideco):
-    min = get_arg(1, min)
-    max = get_arg(2, max)
+    max = get_arg(1, max)
+    min = get_arg(2, min)
     rapideco = get_arg(3, rapideco)
     return min, max, rapideco
 
