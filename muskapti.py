@@ -17,7 +17,7 @@ Se la numero fariĝas malpli alta ol {min}, ĝi reiras al {max}.
 Multan sukceson!
 """
 
-maltrafo = "Ne, la numero estas pli alta"
+maltrafo = "Ne, la numero estas pli alta ol {0}"
 
 
 def get_arg(index, default):
@@ -84,7 +84,7 @@ def ludu(ludantoj, min, max, rapideco):
             provo = 0
         if provo == muso:
             return nomo, vico
-        print(maltrafo if muso > provo else maltrafo.replace("pli", "malpli"))
+        print(maltrafo.format(provo) if muso > provo else maltrafo.replace("pli", "malpli").format(provo))
         vico += 1
         if rapideco < 0:
             pasho = randint(rapideco, -rapideco)
